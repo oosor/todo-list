@@ -1,0 +1,74 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+div.dropdown {
+    color: white;
+}
+.list-group {
+
+}
+.panel-heading.float-right {
+    display: flex;
+    padding-bottom: 0;
+}
+.panel-heading:not(.float-right) {
+    display: flex;
+    flex-direction: column;
+}
+.panel-heading.float-right > button {
+    margin-right: 10px;
+    height: 30px;
+}
+.panel-heading.float-right .dropdown .dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.list-group .list-group-item {
+    display: flex;
+    margin: 2px auto;
+    padding: 15px;
+    border-radius: 4px;
+}
+.list-group .list-group-item.list-group-item-success {
+    border-left: 4px solid #28a745;
+}
+.list-group .list-group-item.list-group-item-info {
+    border-left: 4px solid #17a2b8;
+}
+.list-group .list-group-item.list-group-item-danger {
+    border-left: 4px solid #dc3545;
+}
+.list-group .list-group-item .custom-control {
+    display: inline-block;
+}
+.list-group .list-group-item .title {
+    margin: auto 20px;
+}
+.list-group .list-group-item .resolved {
+    text-decoration: line-through;
+}
+.task-date, .task-user {
+    position: absolute;
+    display: flex;
+    right: 0;
+}
+.task-date {
+    top: 0;
+}
+.task-user {
+    bottom: 0;
+}
+.task-date .task-date-created, .task-date .task-date-resolved, .task-user .task-detail {
+    margin-right: 20px;
+    font-size: 12px;
+}
+.task-date .task-date-created span, .task-date .task-date-resolved span, .task-user .task-detail span {
+
+}
+.modal-header {
+    display: flex;
+}
+.modal-header button {
+    margin-left: auto;
+}

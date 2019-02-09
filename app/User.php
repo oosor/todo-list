@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'is_admin', 'local_timezone',
     ];
 
     /**
@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    function isAdmin() {
+        return $this->is_admin == 1;
+    }
+
+    function tasks() {
+        return $this->hasMany('App\Task');
+    }
+
+    function userTasks() {
+        return $this->hasMany('App\Task', 'author_id');
+    }
 }

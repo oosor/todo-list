@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Auth::routes(); // will be del
+
+Route::post('login', 'LoginController@authenticate');
+Route::post('register', 'RegisterController@register');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('task', 'TaskController', ['only' => [
+    'index', 'show', 'store', 'update',
+]]);
