@@ -20,9 +20,7 @@ class CreateTasksTable extends Migration
             $table->string('name');
             $table->boolean('checked')->default(false);
             $table->timestamp('resolved_at');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 
